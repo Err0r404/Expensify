@@ -3,7 +3,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import './styles/styles.scss';
 
@@ -31,7 +31,7 @@ const EditExpensePage = () => {
     )
 };
 
-const HelpExpensePage = () => {
+const HelpPage = () => {
     return (
         <div>
             Help expense's component
@@ -39,14 +39,23 @@ const HelpExpensePage = () => {
     )
 };
 
+const NotFoundPage = () => {
+    return (
+        <div>
+            Not found's component
+        </div>
+    )
+};
+
 const routes = (
     <BrowserRouter>
-        <div>
-            <Route path="/" component={ExpenseDashboardPage} exact={true}/>
-            <Route path="/create" component={AddExpensePage}/>
-            <Route path="/edit" component={EditExpensePage}/>
-            <Route path="/help" component={HelpExpensePage}/>
-        </div>
+        <Switch>
+            <Route path="/" component={ExpenseDashboardPage} exact={true} />
+            <Route path="/create" component={AddExpensePage} />
+            <Route path="/edit" component={EditExpensePage} />
+            <Route path="/help" component={HelpPage} />
+            <Route component={NotFoundPage} />
+        </Switch>
     </BrowserRouter>
 );
 
