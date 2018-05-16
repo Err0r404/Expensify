@@ -1,5 +1,5 @@
 const person = {
-    // name: 'Julien',
+    // itemName: 'Julien',
     age: 30,
     location: {
         city: 'Montpellier',
@@ -8,7 +8,7 @@ const person = {
 };
 
 // Old syntax
-// const name = person.name;
+// const itemName = person.itemName;
 // const age = person.age;
 
 // New syntax
@@ -25,7 +25,7 @@ const book = {
     title: 'Ego is the Enemy',
     author: 'Ryan Holiday',
     publisher: {
-        // name: 'Penguin'
+        // itemName: 'Penguin'
     }
 };
 
