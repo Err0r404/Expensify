@@ -28,7 +28,10 @@ const setCount = ({count = 1} = {}) => {
     }
 };
 
-const store = createStore((state = {count: 0}, action) => {
+// Reducers
+// Sould be "pure function" (doesn't depend on something outside his scope)
+// Never change state or action
+const countReducer = (state = {count: 0}, action) => {
     switch (action.type) {
         case 'INCREMENT':
             return {
@@ -50,7 +53,15 @@ const store = createStore((state = {count: 0}, action) => {
             return state;
 
     }
-});
+};
+
+// Exemples NOT "pure function"
+let a = 0;
+const notPureFn = (b) => {
+    return a + b;
+};
+
+const store = createStore(countReducer);
 
 store.subscribe(() => {
     console.log(store.getState());
