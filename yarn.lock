@@ -412,7 +412,7 @@ babel-helper-define-map@^6.24.1:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-helper-define-map/-/babel-helper-define-map-6.26.0.tgz#a5f56dab41a25f97ecb498c7ebaca9819f95be5f"
   dependencies:
-    babel-helper-function-itemName "^6.24.1"
+    babel-helper-function-name "^6.24.1"
     babel-runtime "^6.26.0"
     babel-types "^6.26.0"
     lodash "^4.17.4"
@@ -436,7 +436,7 @@ babel-helper-explode-class@^6.24.1:
 
 babel-helper-function-name@^6.24.1:
   version "6.24.1"
-  resolved "https://registry.yarnpkg.com/babel-helper-function-itemName/-/babel-helper-function-itemName-6.24.1.tgz#d3475b8c03ed98242a25b48351ab18399d3580a9"
+  resolved "https://registry.yarnpkg.com/babel-helper-function-name/-/babel-helper-function-name-6.24.1.tgz#d3475b8c03ed98242a25b48351ab18399d3580a9"
   dependencies:
     babel-helper-get-function-arity "^6.24.1"
     babel-runtime "^6.22.0"
@@ -477,7 +477,7 @@ babel-helper-remap-async-to-generator@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-helper-remap-async-to-generator/-/babel-helper-remap-async-to-generator-6.24.1.tgz#5ec581827ad723fecdd381f1c928390676e4551b"
   dependencies:
-    babel-helper-function-itemName "^6.24.1"
+    babel-helper-function-name "^6.24.1"
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
     babel-traverse "^6.24.1"
@@ -597,7 +597,7 @@ babel-plugin-transform-class-properties@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-class-properties/-/babel-plugin-transform-class-properties-6.24.1.tgz#6a79763ea61d33d36f37b611aa9def81a81b46ac"
   dependencies:
-    babel-helper-function-itemName "^6.24.1"
+    babel-helper-function-name "^6.24.1"
     babel-plugin-syntax-class-properties "^6.8.0"
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
@@ -639,7 +639,7 @@ babel-plugin-transform-es2015-classes@^6.23.0, babel-plugin-transform-es2015-cla
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-classes/-/babel-plugin-transform-es2015-classes-6.24.1.tgz#5a4c58a50c9c9461e564b4b2a3bfabc97a2584db"
   dependencies:
     babel-helper-define-map "^6.24.1"
-    babel-helper-function-itemName "^6.24.1"
+    babel-helper-function-name "^6.24.1"
     babel-helper-optimise-call-expression "^6.24.1"
     babel-helper-replace-supers "^6.24.1"
     babel-messages "^6.23.0"
@@ -676,9 +676,9 @@ babel-plugin-transform-es2015-for-of@^6.22.0, babel-plugin-transform-es2015-for-
 
 babel-plugin-transform-es2015-function-name@^6.22.0, babel-plugin-transform-es2015-function-name@^6.24.1:
   version "6.24.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-function-itemName/-/babel-plugin-transform-es2015-function-itemName-6.24.1.tgz#834c89853bc36b1af0f3a4c5dbaa94fd8eacaa8b"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-function-name/-/babel-plugin-transform-es2015-function-name-6.24.1.tgz#834c89853bc36b1af0f3a4c5dbaa94fd8eacaa8b"
   dependencies:
-    babel-helper-function-itemName "^6.24.1"
+    babel-helper-function-name "^6.24.1"
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
@@ -811,7 +811,7 @@ babel-plugin-transform-object-rest-spread@^6.22.0:
 
 babel-plugin-transform-react-display-name@^6.23.0:
   version "6.25.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-display-itemName/-/babel-plugin-transform-react-display-itemName-6.25.0.tgz#67e2bf1f1e9c93ab08db96792e05392bf2cc28d1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-display-name/-/babel-plugin-transform-react-display-name-6.25.0.tgz#67e2bf1f1e9c93ab08db96792e05392bf2cc28d1"
   dependencies:
     babel-runtime "^6.22.0"
 
@@ -873,7 +873,7 @@ babel-preset-env@^1.5.2:
     babel-plugin-transform-es2015-destructuring "^6.23.0"
     babel-plugin-transform-es2015-duplicate-keys "^6.22.0"
     babel-plugin-transform-es2015-for-of "^6.23.0"
-    babel-plugin-transform-es2015-function-itemName "^6.22.0"
+    babel-plugin-transform-es2015-function-name "^6.22.0"
     babel-plugin-transform-es2015-literals "^6.22.0"
     babel-plugin-transform-es2015-modules-amd "^6.22.0"
     babel-plugin-transform-es2015-modules-commonjs "^6.23.0"
@@ -906,7 +906,7 @@ babel-preset-es2015@^6.9.0:
     babel-plugin-transform-es2015-destructuring "^6.22.0"
     babel-plugin-transform-es2015-duplicate-keys "^6.24.1"
     babel-plugin-transform-es2015-for-of "^6.22.0"
-    babel-plugin-transform-es2015-function-itemName "^6.24.1"
+    babel-plugin-transform-es2015-function-name "^6.24.1"
     babel-plugin-transform-es2015-literals "^6.22.0"
     babel-plugin-transform-es2015-modules-amd "^6.24.1"
     babel-plugin-transform-es2015-modules-commonjs "^6.24.1"
@@ -933,7 +933,7 @@ babel-preset-react@^6.24.1:
   resolved "https://registry.yarnpkg.com/babel-preset-react/-/babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380"
   dependencies:
     babel-plugin-syntax-jsx "^6.3.13"
-    babel-plugin-transform-react-display-itemName "^6.23.0"
+    babel-plugin-transform-react-display-name "^6.23.0"
     babel-plugin-transform-react-jsx "^6.24.1"
     babel-plugin-transform-react-jsx-self "^6.22.0"
     babel-plugin-transform-react-jsx-source "^6.22.0"
@@ -1563,17 +1563,17 @@ color-convert@^1.3.0, color-convert@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.1.tgz#c1261107aeb2f294ebffec9ed9ecad529a6097ed"
   dependencies:
-    color-itemName "^1.1.1"
+    color-name "^1.1.1"
 
 color-name@^1.0.0, color-name@^1.1.1:
   version "1.1.3"
-  resolved "https://registry.yarnpkg.com/color-itemName/-/color-itemName-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
+  resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
 
 color-string@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/color-string/-/color-string-0.3.0.tgz#27d46fb67025c5c2fa25993bfbf579e47841b991"
   dependencies:
-    color-itemName "^1.0.0"
+    color-name "^1.0.0"
 
 color@^0.11.0:
   version "0.11.4"
@@ -6623,7 +6623,7 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
 
-uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0:
+uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0, uuid@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
 
