@@ -1,7 +1,7 @@
 import {createStore, combineReducers} from 'redux';
 import uuid from 'uuid';
 
-// Actions
+// Expenses Actions
 const addExpense = ({description = '', note = '', amount = 0, createdAt = 0} = {}) => {
     return {
         type: 'ADD_EXPENSE',
@@ -22,6 +22,14 @@ const removeExpense = ({id} = {}) => {
     }
 };
 
+const editExpense = (id, updates) => {
+    return {
+        type: 'EDIT_EXPENSE',
+        id: id,
+        updates: updates
+    }
+};
+
 // Expenses Reducer
 const expenseReducerDefaultState = [];
 const expenseReducer = (state = expenseReducerDefaultState, action) => {
@@ -33,8 +41,29 @@ const expenseReducer = (state = expenseReducerDefaultState, action) => {
             ];
         case 'REMOVE_EXPENSE':
             return state.filter((expense) => action.id !== expense.id);
+        case 'EDIT_EXPENSE':
+            return state.map((expense) => {
+                if (expense.id === action.id){
+                    // Merge expense and updates and return it
+                    return {
+                        ...expense,
+                        ...action.updates
+                    }
+                }
+                else {
+                    return expense;
+                }
+            });
         default:
             return state;
+    }
+};
+
+// Filters Actions
+const setTextFilter = (text = '') => {
+    return {
+        type: 'SET_TEXT_FILTER',
+        text: text
     }
 };
 
@@ -47,6 +76,11 @@ const filterReducerDefaultState = {
 };
 const filterReducer = (state = filterReducerDefaultState, action) => {
     switch (action.type) {
+        case 'SET_TEXT_FILTER':
+            return {
+                ...state,
+                text: action.text
+            };
         default:
             return state;
     }
@@ -63,6 +97,7 @@ store.subscribe(() => {
     console.log(store.getState());
 });
 
+// Expenses
 const expenseOne = store.dispatch(addExpense({description: 'Rent', amount: 65500}));
 console.log(expenseOne);
 
@@ -72,6 +107,14 @@ console.log(expenseTwo);
 const expenseTwoRemove = store.dispatch(removeExpense({id: expenseTwo.expense.id}));
 console.log(expenseTwoRemove);
 
+const expenseOneBis = store.dispatch(editExpense(expenseOne.expense.id, {amount: 66600}));
+console.log(expenseOneBis);
+
+// Filters
+store.dispatch(setTextFilter('food'));
+store.dispatch(setTextFilter());
+
+/*
 const demoState = {
     expenses: [
         {
@@ -89,4 +132,4 @@ const demoState = {
         endDate: undefined
     }
 };
-
+*/
