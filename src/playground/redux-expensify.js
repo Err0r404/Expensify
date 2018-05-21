@@ -32,7 +32,7 @@ const editExpense = (id, updates) => {
 
 // Expenses Reducer
 const expenseReducerDefaultState = [];
-const expenseReducer = (state = expenseReducerDefaultState, action) => {
+const expensesReducer = (state = expenseReducerDefaultState, action) => {
     switch (action.type) {
         case 'ADD_EXPENSE':
             return [
@@ -102,7 +102,7 @@ const filterReducerDefaultState = {
     startDate: undefined,
     endDate: undefined,
 };
-const filterReducer = (state = filterReducerDefaultState, action) => {
+const filtersReducer = (state = filterReducerDefaultState, action) => {
     switch (action.type) {
         case 'SET_TEXT_FILTER':
             return {
@@ -151,8 +151,8 @@ const getVisibleExpenses = (expenses, {text, sortBy, startDate, endDate}) => {
 // Create the Store
 const store = createStore(
     combineReducers({
-        expenses: expenseReducer,
-        filters: filterReducer
+        expenses: expensesReducer,
+        filters: filtersReducer
     })
 );
 
