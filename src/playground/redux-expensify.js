@@ -130,6 +130,7 @@ const filterReducer = (state = filterReducerDefaultState, action) => {
     }
 };
 
+// Use Filters on Expenses
 const getVisibleExpenses = (expenses, {text, sortBy, startDate, endDate}) => {
     return expenses.filter((expense) => {
         const startDateMatch = typeof startDate !== 'number' || expense.createdAt >= startDate;
@@ -137,6 +138,13 @@ const getVisibleExpenses = (expenses, {text, sortBy, startDate, endDate}) => {
         const textMatch = expense.description.toLowerCase().includes(text.toLowerCase());
 
         return startDateMatch && endDateMatch && textMatch;
+    }).sort((a, b) => {
+        if (sortBy === 'date'){
+            return a.createdAt < b.createdAt ? 1 : -1;
+        }
+        else if (sortBy === 'amount'){
+            return a.amount < b.amount ? 1 : -1;
+        }
     });
 };
 
@@ -169,10 +177,10 @@ const expenseTwo = store.dispatch(addExpense({description: 'Coffee', amount: 250
 // console.log(expenseOneBis);
 
 // // Filters
-store.dispatch(setTextFilter('rent'));
+// store.dispatch(setTextFilter('rent'));
 // store.dispatch(setTextFilter());
 //
-// store.dispatch(sortByAmount());
+store.dispatch(sortByAmount());
 // store.dispatch(sortByDate());
 //
 // store.dispatch(setStartDate(2000));
