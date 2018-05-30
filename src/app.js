@@ -16,15 +16,9 @@ const store = configureStore();
 console.log('Init', store.getState());
 
 store.dispatch(addExpense({description: 'Water bill', note: '', amount: 3000}));
-store.dispatch(addExpense({description: 'Gas bill', note: '', amount: 0}));
-console.log('Added 2', store.getState());
-
-store.dispatch(setTextFilter('water'));
-console.log('Filter water', getVisibleExpenses(store.getState().expenses, store.getState().filters));
-
-setTimeout(() => {
-    store.dispatch(setTextFilter('bill'));
-}, 3000);
+store.dispatch(addExpense({description: 'Gas bill', note: '', amount: 0, createdAt: 1000}));
+store.dispatch(addExpense({description: 'Rent', note: '', amount: 66000, createdAt: 500}));
+console.log('Added 3', store.getState());
 
 const jsx = (
     <Provider store={store}>
