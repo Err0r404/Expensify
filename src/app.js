@@ -15,9 +15,9 @@ import './styles/styles.scss';
 const store = configureStore();
 console.log('Init', store.getState());
 
-store.dispatch(addExpense({description: 'Water bill', note: '', amount: 3000}));
-store.dispatch(addExpense({description: 'Gas bill', note: '', amount: 0, createdAt: 1000}));
-store.dispatch(addExpense({description: 'Rent', note: '', amount: 66000, createdAt: 500}));
+store.dispatch(addExpense({description: 'Water bill', note: '', amount: 0, createdAt:1526203225000}));
+store.dispatch(addExpense({description: 'Gas bill', note: '', amount: 0, createdAt: 1526030425000}));
+store.dispatch(addExpense({description: 'Rent', note: '', amount: 66000, createdAt: 1526116825000}));
 console.log('Added 3', store.getState());
 
 const jsx = (
