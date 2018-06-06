@@ -1,30 +1,7 @@
 import moment from 'moment';
 
 import selectExpenses from '../../selectors/expenses';
-
-const expenses = [
-    {
-        id: '1',
-        description: 'Gum',
-        note: '',
-        amount: 150,
-        createdAt: 0
-    },
-    {
-        id: '2',
-        description: 'Rent',
-        note: '',
-        amount: 67000,
-        createdAt: moment(0).subtract(4, 'days').valueOf()
-    },
-    {
-        id: '3',
-        description: 'Restaurant',
-        note: '',
-        amount: 5000,
-        createdAt: moment(0).add(4, 'days').valueOf()
-    },
-];
+import expenses from '../fixtures/expenses';
 
 test('Should filter by text', () => {
     const filters = {
